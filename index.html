@@ -1,13 +1,22 @@
+
+
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
 
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="x5-fullscreen" content="true">
-<meta name="full-screen" content="yes">
-<meta name="theme-color" content="#317EFB" />
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta name="description" content="一个博客热爱者">
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="千寻">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="一个博客热爱者">
 <meta property="og:type" content="website">
 <meta property="og:title" content="千寻">
 <meta property="og:url" content="http://qianxun747.link/index.html">
@@ -15,740 +24,923 @@
 <meta property="og:description" content="一个博客热爱者">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="千寻">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>千寻</title>
 
-
-<title >千寻</title>
-
-<!-- Favicon -->
-
-    <link href='/img/logo.png?v=2.0.9' rel='icon' type='image/png' sizes='16x16' ></link>
-
-
-    <link href='/img/logo.png?v=2.0.9' rel='icon' type='image/png' sizes='32x32' ></link>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
 
 
-<!-- Plugin -->
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
 
 
 
 
-    
-<link rel="stylesheet" href="/css/plugins/bootstrap.row.css">
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"qianxun747.link","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":true,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
-    
-<link rel="stylesheet" href="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
-
-    
-<link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.css">
-
-    
-    
-
-
-
-
-<!-- Icon -->
-
-    
-<link rel="stylesheet" href="/css/plugins/font-awesome.min.css">
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
 
 
-
-
-<!-- Variable -->
-<script>window.ASYNC_CONFIG = {"hostname":"qianxun747.link","author":"千寻","root":"/","typed_text":null,"theme_version":"2.0.9","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"/img/logo.png","icon16":"/img/logo.png","icon32":"/img/logo.png","appleTouchIcon":null,"webmanifest":null,"visibilitychange":false,"hidden":"/failure.ico","showText":"(/≧▽≦/)Hey! Good again!","hideText":"(●—●)Oh, crash!"},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}.","hits":"${hits} results found","hits_time":"${hits} results found in ${time} ms","author":"Post author: ","copyright_link":"Post link: ","copyright_license_title":"Copyright Notice: ","copyright_license_content":"All articles in this blog are licensed under undefined unless otherwise stated.","copy_success":"Copied","copy_failure":"Copy failed","open_read_mode":"Enter reading mode","exit_read_mode":"Exit reading mode","notice_outdate_message":"It has been undefined days since the last update, the content of the article may be outdated.","just":"Just","min":"minutes ago","hour":"hours ago","day":"days ago","month":"months ago"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":false},"notice_outdate":{"enable":true,"style":"flat","limit_day":1,"position":"top"}};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":false,"isHome":true,"postUpdate":"2023-07-20 14:01:59"};</script>
-
-<!-- Theme mode css -->
-<link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.0.9" id="trm-switch-style">
-<script>
-    let defaultMode = ASYNC_CONFIG.theme.default !=='auto' ?  ASYNC_CONFIG.theme.default : (window.matchMedia("(prefers-color-scheme: light)").matches ? 'style-light' : 'style-dark')
-    let catchMode = localStorage.getItem('theme-mode') || defaultMode;
-    let type = catchMode === 'style-dark' ? 'add' : 'remove';
-    document.documentElement.classList[type]('dark')
-</script>
-
-<!-- CDN -->
-
-
-    
-    
-
-
-
-<!-- Site Analytics -->
- 
-<meta name="generator" content="Hexo 6.3.0">
+  
+<meta name="generator" content="Hexo 5.4.2">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
 </head>
 
+
 <body>
+  
 
-  <!-- app wrapper -->
-  <div class="trm-app-frame">
-
-    <!-- page preloader -->
-    <div class="trm-preloader">
-    <div class="trm-holder">
-        <div class="preloader">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>
-</div>
-    <!-- page preloader end -->
-
-    <!-- change mode preloader -->
-    <div class="trm-mode-swich-animation-frame">
-    <div class="trm-mode-swich-animation">
-        <i class="i-sun"><i class="iconfont far fa-sun"></i></i>
-        <div class="trm-horizon"></div>
-        <i class="i-moon"><i class="iconfont far fa-moon"></i></i>
-    </div>
-</div>
-    <!-- change mode preloader end -->
-
-      <!-- scroll container -->
-      <div id="trm-dynamic-content" class="trm-swup-animation">
-        <div id="trm-scroll-container" class="trm-scroll-container" data-scroll-container style="opacity: 0">
-          <div data-scroll-section id="content" class="trm-scroll-section">
-
-            <div class="locomotive-scroll__sticky-target" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none;"></div>
-
-            <!-- top bar -->
-            <header class="trm-top-bar" data-scroll data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
-	<div class="container">
-		<div class="trm-left-side">
-			<!-- logo -->
-<a href="/" class="trm-logo-frame trm-anima-link">
-    
-        <img alt="logo" src="/img/logo.png">
-    
-    
-        <div class="trm-logo-text">
-            千<span>寻</span>
-        </div>
-    
-</a>
-<!-- logo end -->
-		</div>
-		<div class="trm-right-side">
-			<!-- menu -->
-<div class="trm-menu">
-    <nav>
-        <ul>
-            
-            <li class="menu-item-has-children current-menu-item">
-                <a  href="/" target="">
-                    Home
-                </a>
-                
-            </li>
-            
-            <li class="menu-item-has-children ">
-                <a  href="/archives/" target="">
-                    Archives
-                </a>
-                
-            </li>
-            
-        </ul>
-    </nav>
-</div>
-<!-- menu end -->
-			
-    <!-- mode switcher place -->
-    <div class="trm-mode-switcher-place">
-        <div class="trm-mode-switcher">
-            <i class="iconfont far fa-sun"></i>
-            <input class="tgl tgl-light" id="trm-swich" type="checkbox">
-            <label class="trm-swich" for="trm-swich"></label>
-            <i class="iconfont far fa-moon"></i>
-        </div>
-    </div>
-    <!-- mode switcher place end -->
-
-			
-		</div>
-		<div class="trm-menu-btn">
-			<span></span>
-		</div>
-	</div>
-</header>
-            <!-- top bar end -->
-
-            <!-- body -->
-            <div class="trm-content-start">
-    <!-- banner -->
-    <div class="trm-banner" data-scroll data-scroll-direction="vertical">
-    
-    <!-- banner cover -->
-    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" data-scroll data-scroll-direction="vertical" data-scroll-speed="-3" src="/img/banner.png">
-    <!-- banner cover end -->
+  <header>
     
 
-    <!-- banner content -->
-    <div class="trm-banner-content trm-overlay">
-        <div class="container" data-scroll data-scroll-direction="vertical" data-scroll-speed="0">
-            <div class="row">
-                
-                <div class="col-lg-4"></div>
-                
-                <div class="col-lg-8">
-
-                    <!-- banner title -->
-                    <div class="trm-banner-text ">
-                        <div class="trm-label trm-mb-20">
-                            Welcome to my blog !
-                        </div>
-                        <h1 class="trm-mb-30 trm-hsmb-font">
-                            千寻寻梦，<br>梦必追逐。
-                        </h1>
-
-                        
-                            <ul class="trm-breadcrumbs trm-label">
-                                <li>
-                                    <a href="/" class="trm-anima-link">Home</a>
-                                </li>
-                                <li>
-                                    <span>
-                                        index.html
-                                    </span
-                                ></li>
-                            </ul>
-                        
-                    </div>
-                    <!-- banner title end -->
-
-                    <!-- scroll hint -->
-                    <a href="#about-triger" data-scroll-to="#about-triger" data-scroll-offset="-130" class="trm-scroll-hint-frame">
-                        <div class="trm-scroll-hint"></div>
-                        <span class="trm-label">Scroll down</span>
-                    </a>
-                    <!-- scroll hint end -->
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- banner content end -->
-</div>
-    <!-- banner end -->
-    <div class="container">
-        <div class="row">
-            
-                <div id="page-sidebar" class="col-lg-4 hidden-sm">
-                    <!-- main card -->
-                    
-
-<div class="trm-main-card-frame trm-sidebar">
-    <div class="trm-main-card" data-scroll data-scroll-repeat data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="60"> 
-    
-        <!-- card header -->
-<div class="trm-mc-header">
-    <div class="trm-avatar-frame trm-mb-20">
-        <img alt="Avatar" class="trm-avatar" src="/img/tx.webp">
-    </div>
-    <h5 class="trm-name trm-mb-15">
-        千寻
-    </h5>
-    
-</div>
-<!-- card header end -->
-        <!-- sidebar social -->
-
-<div class="trm-divider trm-mb-40 trm-mt-40"></div>
-<div class="trm-social">
-    
-        <a href="https://github.com、qianxun7747/" title="My Github" rel="nofollow" target="_blank">
-            <i class="iconfont fab fa-github"></i>
-        </a>
-    
-</div>
-
-<!-- sidebar social end -->
-        <!-- info -->
-<div class="trm-divider trm-mb-40 trm-mt-40"></div>
-<ul class="trm-table trm-mb-20">
-    
-        <li>
-            <div class="trm-label">
-                Residence:
-            </div>
-            <div class="trm-label trm-label-light">
-                Mars
-            </div>
-        </li>
-    
-</ul>
-<!-- info end -->
-
-        
-    
-    </div>
-</div>
-                    <!-- main card end -->
-                </div>
-            
-            <div id="page-content" class="col-lg-8">
-                <div class="trm-content" id="trm-content">
-                    <div data-scroll data-scroll-repeat data-scroll-offset="500" id="about-triger"></div>
-
-                    <!-- categories -->
-
-    <div class="row hidden-sm">
-        
-        
-        <div class="col-lg-6">
-            <!-- categories card -->
-<div class="trm-blog-categories trm-scroll-animation" data-scroll data-scroll-offset="40">
-    <h6>
-        前端
-        <span class="trm-number">
-            5
-        </span>
-    </h6>
-    <div class="trm-divider trm-mb-20 trm-mt-20"></div>
-    <a href="/categories/%E5%89%8D%E7%AB%AF/." class="trm-label">
-        Read More 
-        <i class="iconfont fas fa-arrow-right arrow-right"></i>
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
     </a>
-</div>
-<!-- categories card end -->
-        </div>
-        
-        <div class="col-lg-6">
-            <!-- categories card -->
-<div class="trm-blog-categories trm-scroll-animation" data-scroll data-scroll-offset="40">
-    <h6>
-        云游戏
-        <span class="trm-number">
-            1
-        </span>
-    </h6>
-    <div class="trm-divider trm-mb-20 trm-mt-20"></div>
-    <a href="/categories/%E4%BA%91%E6%B8%B8%E6%88%8F/." class="trm-label">
-        Read More 
-        <i class="iconfont fas fa-arrow-right arrow-right"></i>
-    </a>
-</div>
-<!-- categories card end -->
-        </div>
-        
-    </div>
 
-<!-- categories end -->
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
 
-<!-- newest publications -->
-<div class="row">
-    
-        <div class="col-lg-12">
-            <!-- title -->
-            <h5 class="trm-title-with-divider">
-                Newest Publications 
-                <span data-number="01"></span>
-            </h5>
-        </div>
-    
-    
-        <div class="col-lg-6">
-    <div class="trm-blog-card trm-scroll-animation" data-scroll data-scroll-offset="40">
-        <a href="/2023/07/14/%E8%A7%A3%E5%86%B34000%E7%AB%AF%E5%8F%A3%E9%97%AE%E9%A2%98/" class="trm-cover-frame trm-anima-link">
-            
-            
-                <img alt="cover" class="no-fancybox" src="https://cdn.staticaly.com/gh/qianxun7747/picx-images-hosting@master/xxx/QQ%E6%88%AA%E5%9B%BE20230714113830.5gavk6c6mm00.webp">
-            
-        </a>
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
         
-        <div class="trm-card-descr">
-            <div class="trm-label trm-category trm-mb-20">
-                <a href=" /categories/%E5%89%8D%E7%AB%AF/">
-                    前端
-                </a>
-            </div>
-            <h5>
-                <a href="/2023/07/14/%E8%A7%A3%E5%86%B34000%E7%AB%AF%E5%8F%A3%E9%97%AE%E9%A2%98/" class="trm-anima-link">
-                    解决4000端口问题
-                </a>
-            </h5>
-            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
-            <ul class="trm-card-data trm-label">
-                <li>23/07/14</li>
-                <li>11:47</li>
-                
-                
-            </ul>
-        </div>
-    </div>
-</div>
-    
-        <div class="col-lg-6">
-    <div class="trm-blog-card trm-scroll-animation" data-scroll data-scroll-offset="40">
-        <a href="/2023/07/13/%E4%B8%BA%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2%E8%A3%85%E4%B8%8AWaline%E8%AF%84%E8%AE%BA/" class="trm-cover-frame trm-anima-link">
-            
-            
-                <img alt="cover" class="no-fancybox" src="https://s2.loli.net/2023/07/13/jXhiLov4Af8xZO5.png">
-            
-        </a>
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
         
-        <div class="trm-card-descr">
-            <div class="trm-label trm-category trm-mb-20">
-                <a href=" /categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/">
-                    实用教程
-                </a>
-            </div>
-            <h5>
-                <a href="/2023/07/13/%E4%B8%BA%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2%E8%A3%85%E4%B8%8AWaline%E8%AF%84%E8%AE%BA/" class="trm-anima-link">
-                    为你的博客装上Waline评论
-                </a>
-            </h5>
-            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
-            <ul class="trm-card-data trm-label">
-                <li>23/07/13</li>
-                <li>12:52</li>
-                
-                
-            </ul>
-        </div>
-    </div>
-</div>
-    
-        <div class="col-lg-6">
-    <div class="trm-blog-card trm-scroll-animation" data-scroll data-scroll-offset="40">
-        <a href="/2023/07/11/%E5%A6%82%E4%BD%95%E5%9C%A8%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9C%B0%E5%9B%BE/" class="trm-cover-frame trm-anima-link">
-            
-            
-                <img alt="cover" class="no-fancybox" src="https://s2.loli.net/2023/07/11/X4oNCkqsm1RijTV.png">
-            
-        </a>
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
         
-        <div class="trm-card-descr">
-            <div class="trm-label trm-category trm-mb-20">
-                <a href=" /categories/%E5%89%8D%E7%AB%AF/">
-                    前端
-                </a>
-            </div>
-            <h5>
-                <a href="/2023/07/11/%E5%A6%82%E4%BD%95%E5%9C%A8%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9C%B0%E5%9B%BE/" class="trm-anima-link">
-                    如何在博客中添加地图
-                </a>
-            </h5>
-            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
-            <ul class="trm-card-data trm-label">
-                <li>23/07/11</li>
-                <li>12:53</li>
-                
-                
-            </ul>
-        </div>
-    </div>
-</div>
-    
-        <div class="col-lg-6">
-    <div class="trm-blog-card trm-scroll-animation" data-scroll data-scroll-offset="40">
-        <a href="/2023/07/11/%E5%9C%B0%E5%9B%BE%E6%B5%8B%E8%AF%95/" class="trm-cover-frame trm-anima-link">
-            
-            
-                <img alt="cover" class="no-fancybox" src="https://s2.loli.net/2023/07/11/X4oNCkqsm1RijTV.png">
-            
-        </a>
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
         
-        <div class="trm-card-descr">
-            <div class="trm-label trm-category trm-mb-20">
-                <a href=" /categories/%E5%89%8D%E7%AB%AF/">
-                    前端
-                </a>
-            </div>
-            <h5>
-                <a href="/2023/07/11/%E5%9C%B0%E5%9B%BE%E6%B5%8B%E8%AF%95/" class="trm-anima-link">
-                    地图测试
-                </a>
-            </h5>
-            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
-            <ul class="trm-card-data trm-label">
-                <li>23/07/11</li>
-                <li>12:14</li>
-                
-                
-            </ul>
-        </div>
-    </div>
-</div>
-    
-        <div class="col-lg-6">
-    <div class="trm-blog-card trm-scroll-animation" data-scroll data-scroll-offset="40">
-        <a href="/2023/07/11/%E7%BB%99%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2Waline%E8%AF%84%E8%AE%BA%E6%B7%BB%E5%8A%A0%E4%B8%8A%E6%8F%90%E9%86%92%E4%B8%8D%E5%86%8D%E9%94%99%E8%BF%87%E9%80%9A%E7%9F%A5/" class="trm-cover-frame trm-anima-link">
-            
-            
-                <img alt="cover" class="no-fancybox" src="https://cdn.staticaly.com/gh/qianxun7747/picx-images-hosting@master/20230711/logo.u3m2fzwm0xs.webp">
-            
-        </a>
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
         
-        <div class="trm-card-descr">
-            <div class="trm-label trm-category trm-mb-20">
-                <a href=" /categories/%E5%89%8D%E7%AB%AF/">
-                    前端
-                </a>
-            </div>
-            <h5>
-                <a href="/2023/07/11/%E7%BB%99%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2Waline%E8%AF%84%E8%AE%BA%E6%B7%BB%E5%8A%A0%E4%B8%8A%E6%8F%90%E9%86%92%E4%B8%8D%E5%86%8D%E9%94%99%E8%BF%87%E9%80%9A%E7%9F%A5/" class="trm-anima-link">
-                    给你的博客Waline评论添加上提醒不再错过通知!(已弃用)
-                </a>
-            </h5>
-            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
-            <ul class="trm-card-data trm-label">
-                <li>23/07/11</li>
-                <li>09:39</li>
-                
-                
-            </ul>
-        </div>
-    </div>
-</div>
-    
-        <div class="col-lg-6">
-    <div class="trm-blog-card trm-scroll-animation" data-scroll data-scroll-offset="40">
-        <a href="/2023/07/09/%E5%A6%82%E4%BD%95%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A/" class="trm-cover-frame trm-anima-link">
-            
-            
-                <img alt="cover" class="no-fancybox" src="https://s2.loli.net/2023/07/10/3TijXBMDhfkqClJ.png">
-            
-        </a>
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
         
-        <div class="trm-card-descr">
-            <div class="trm-label trm-category trm-mb-20">
-                <a href=" /categories/%E5%9B%BE%E5%BA%8A/">
-                    图床
-                </a>
-            </div>
-            <h5>
-                <a href="/2023/07/09/%E5%A6%82%E4%BD%95%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A/" class="trm-anima-link">
-                    如何拥有一个属于自己的图床
-                </a>
-            </h5>
-            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
-            <ul class="trm-card-data trm-label">
-                <li>23/07/09</li>
-                <li>19:09</li>
-                
-                
-            </ul>
-        </div>
-    </div>
-</div>
-    
-        <div class="col-lg-6">
-    <div class="trm-blog-card trm-scroll-animation" data-scroll data-scroll-offset="40">
-        <a href="/2023/07/09/%E2%80%9C%E5%85%8D%E8%B4%B9%E2%80%9D%E4%BA%91%E6%B8%B8%E6%88%8F%E2%80%9C%E6%98%9F%E6%B8%B8%E4%BA%91%E6%B8%B8%E6%88%8F%E2%80%9D/" class="trm-cover-frame trm-anima-link">
-            
-            
-                <img alt="cover" class="no-fancybox" src="https://s2.loli.net/2023/07/09/Ow1da9YbFevGEBR.png">
-            
-        </a>
         
-        <div class="trm-card-descr">
-            <div class="trm-label trm-category trm-mb-20">
-                <a href=" /categories/%E4%BA%91%E6%B8%B8%E6%88%8F/">
-                    云游戏
-                </a>
-            </div>
-            <h5>
-                <a href="/2023/07/09/%E2%80%9C%E5%85%8D%E8%B4%B9%E2%80%9D%E4%BA%91%E6%B8%B8%E6%88%8F%E2%80%9C%E6%98%9F%E6%B8%B8%E4%BA%91%E6%B8%B8%E6%88%8F%E2%80%9D/" class="trm-anima-link">
-                    “免费”云游戏“星游云游戏”
-                </a>
-            </h5>
-            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
-            <ul class="trm-card-data trm-label">
-                <li>23/07/09</li>
-                <li>17:18</li>
-                
-                
-            </ul>
-        </div>
-    </div>
-</div>
-    
-        <div class="col-lg-6">
-    <div class="trm-blog-card trm-scroll-animation" data-scroll data-scroll-offset="40">
-        <a href="/2023/07/06/%E5%A6%82%E4%BD%95%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%8A%A0%E4%B8%8A%E5%B0%8F%E7%A9%BA%E8%B0%83/" class="trm-cover-frame trm-anima-link">
-            
-            
-                <img alt="cover" class="no-fancybox" src="https://s1.locimg.com/2023/07/03/e02f66f38b121.jpg">
-            
-        </a>
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
         
-        <div class="trm-card-descr">
-            <div class="trm-label trm-category trm-mb-20">
-                <a href=" /categories/%E5%89%8D%E7%AB%AF/">
-                    前端
-                </a>
-            </div>
-            <h5>
-                <a href="/2023/07/06/%E5%A6%82%E4%BD%95%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%8A%A0%E4%B8%8A%E5%B0%8F%E7%A9%BA%E8%B0%83/" class="trm-anima-link">
-                    如何给博客加上小空调
-                </a>
-            </h5>
-            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
-            <ul class="trm-card-data trm-label">
-                <li>23/07/06</li>
-                <li>15:29</li>
-                
-                
-            </ul>
-        </div>
-    </div>
-</div>
-    
-        <div class="col-lg-6">
-    <div class="trm-blog-card trm-scroll-animation" data-scroll data-scroll-offset="40">
-        <a href="/2023/07/05/%E7%83%AD%E8%A1%80%E6%97%A0%E8%B5%96%E5%BF%83%E5%BE%97/" class="trm-cover-frame trm-anima-link">
-            
-            
-                <img alt="cover" class="no-fancybox" src="https://cdn.staticaly.com/gh/qianxun7747/picx-images-hosting@master/20230706/20230705073904_1.5ze951aa4as0.jpg">
-            
-        </a>
         
-        <div class="trm-card-descr">
-            <div class="trm-label trm-category trm-mb-20">
-                <a href=" /categories/%E6%B8%B8%E6%88%8F/">
-                    游戏
-                </a>
-            </div>
-            <h5>
-                <a href="/2023/07/05/%E7%83%AD%E8%A1%80%E6%97%A0%E8%B5%96%E5%BF%83%E5%BE%97/" class="trm-anima-link">
-                    热血无赖“心得”
-                </a>
-            </h5>
-            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
-            <ul class="trm-card-data trm-label">
-                <li>23/07/05</li>
-                <li>17:57</li>
-                
-                
-            </ul>
-        </div>
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
     </div>
-</div>
-    
-</div>
-<!-- newest publications end -->
+  </div>
+</nav>
 
+  
 
-    <div class="trm-pagination">
-        <span class="page-number current">1</span>
-    </div>
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="An elegant Material-Design theme for Hexo"></span>
+          
+        </div>
 
+        
+      </div>
 
-                    <div class="trm-divider footer-divider"></div>
-
-                    <!-- footer -->
-                    <footer class="trm-scroll-animation" data-scroll data-scroll-offset="50">
-
-    
-
-    
-
-    
-        <div class="trm-footer-item">
-            <span>
-                Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> v6.3.0
-            </span>
-            <span class="footer-separator" data-separator=" | "></span>
-            <span> 
-                Theme - 
-                <a rel="noopener" href='https://github.com/MaLuns/hexo-theme-async' target='_blank'>Async</a>
-                v2.0.9
-            </span>
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
         </div>
       
+    </div>
+  </div>
+</div>
 
-     
+</div>
 
-     
-</footer>
- 
-                    <!-- footer end -->
+  </header>
 
-                </div>
-            </div>
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          style="margin-top: 0">
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/07/14/%E8%A7%A3%E5%86%B34000%E7%AB%AF%E5%8F%A3%E9%97%AE%E9%A2%98/" target="_self">
+          解决4000端口问题
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/07/14/%E8%A7%A3%E5%86%B34000%E7%AB%AF%E5%8F%A3%E9%97%AE%E9%A2%98/" target="_self">
+        <div>
+          前言相信大家都遇到过这种情况其实这就是4000端口被占用所引起的报错 解决方法现在是一些常见的解决方法 查看是不是重复看看是不是因为多开GitBash而引起的，其实一般开两个是不会报错的，但是如果有一个已经在运行了，就会引起这样的报错，就像这样然后我们可以关掉一个，然后三连 1hexo cl &amp;&amp; hexo g &amp;&amp; hexo s 使用另一个端口使用另一个端口也可以
         </div>
-    </div>
-</div>
-            <!-- body end -->
+      </a>
 
-            <div class="trm-fixed-container" data-scroll data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-07-14 11:47" pubdate>
+              2023-07-14
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%89%8D%E7%AB%AF/" class="category-chain-item">前端</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%89%8D%E7%AB%AF/%E6%8A%A5%E9%94%99/" class="category-chain-item">报错</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%8A%A5%E9%94%99/">#报错</a>
+            
+              <a href="/tags/%E8%A7%A3%E5%86%B3%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%81/">#解决错误代码</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
     
     
-    <div id="trm-back-top" class="trm-fixed-btn" data-title="Back To Top">
-        <i class="iconfont fas fa-arrow-up"></i>
-    </div>
-</div>
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/07/13/%E4%B8%BA%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2%E8%A3%85%E4%B8%8AWaline%E8%AF%84%E8%AE%BA/" target="_self">
+          为你的博客装上Waline评论
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/07/13/%E4%B8%BA%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2%E8%A3%85%E4%B8%8AWaline%E8%AF%84%E8%AE%BA/" target="_self">
+        <div>
+          特别注意！要使用Waline必须要有域名，并且进行绑定，详情查看步骤 依旧是前言如标题，今天千寻将会教你们如何给博客装上Waline这个带后台的评论，并让自己成为管理员进行管理 所需接下来是我们所需要的:域名，没有你即可划走了，Vercel账号（没有注册，挺简单的），域名解析平台，（这里推荐（CF）当然不是穿越火线，而是cloudflare），LeanCloud，然后就是人人皆有的邮箱啦！ 所需要
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-07-13 12:52" pubdate>
+              2023-07-13
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/" class="category-chain-item">实用教程</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/Waline/" class="category-chain-item">Waline</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%95%99%E7%A8%8B/">#教程</a>
+            
+              <a href="/tags/Waline%EF%BC%8C/">#Waline，</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/07/11/%E5%A6%82%E4%BD%95%E5%9C%A8%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9C%B0%E5%9B%BE/" target="_self">
+          如何在博客中添加地图
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/07/11/%E5%A6%82%E4%BD%95%E5%9C%A8%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9C%B0%E5%9B%BE/" target="_self">
+        <div>
+          哈喽啊我是千寻，不多说废话，直接开始教程 超级重要(安装插件)我们使用以下命令 1npm i hexo-tag-map  在文章中使用我们在文章中使用 1{% + 标签值 + 经度 + 纬度 + 文本 + 缩放等级 + 宽 + 高 + 默认图层 + %} 以下是示例 1{% map 105.934873,29.341693 %} 然后我们在文章中使用即可 var normalm=L.tileLay
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-07-11 12:53" pubdate>
+              2023-07-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%89%8D%E7%AB%AF/" class="category-chain-item">前端</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%9C%B0%E5%9B%BE/">#地图</a>
+            
+              <a href="/tags/%E5%89%8D%E7%AB%AF/">#前端</a>
+            
+              <a href="/tags/%E9%AD%94%E6%94%B9/">#魔改</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/07/11/%E5%9C%B0%E5%9B%BE%E6%B5%8B%E8%AF%95/" target="_self">
+          地图测试
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/07/11/%E5%9C%B0%E5%9B%BE%E6%B5%8B%E8%AF%95/" target="_self">
+        <div>
+          前言这只是一个测试 测试开始这是我居住重庆的区县的著名广场 var normalm=L.tileLayer.chinaProvider('GaoDe.Normal.Map',{maxZoom:20,minZoom:1,attribution:'高德地图'});var imgm=L.tileLayer.chinaProvider('GaoDe.Satellite.Map',{maxZoom:20,m
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-07-11 12:14" pubdate>
+              2023-07-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%89%8D%E7%AB%AF/" class="category-chain-item">前端</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%B5%8B%E8%AF%95/">#测试</a>
+            
+              <a href="/tags/%E5%9C%B0%E5%9B%BE/">#地图</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/07/11/%E7%BB%99%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2Waline%E8%AF%84%E8%AE%BA%E6%B7%BB%E5%8A%A0%E4%B8%8A%E6%8F%90%E9%86%92%E4%B8%8D%E5%86%8D%E9%94%99%E8%BF%87%E9%80%9A%E7%9F%A5/" target="_self">
+          给你的博客Waline评论添加上提醒不再错过通知!(已弃用)
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/07/11/%E7%BB%99%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2Waline%E8%AF%84%E8%AE%BA%E6%B7%BB%E5%8A%A0%E4%B8%8A%E6%8F%90%E9%86%92%E4%B8%8D%E5%86%8D%E9%94%99%E8%BF%87%E9%80%9A%E7%9F%A5/" target="_self">
+        <div>
+          前言(还是废话)每次别人给你评论的时候，当你发现别人的评论时,可能已经过了十天半个月了现在，千寻就来叫你如何添加通知 弃用原因提供7天服务，服务后似乎要收费才能更好使用 教程现在是教程阶段。 准备好Vercel相信有Waline评论的应该都有Waline的Vercel，所以就不再废话，我这里没有提供教程，以后可能会有，大家可以先自行百度 登录Server酱我们前往Server酱登录后即可。 找到你
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-07-11 09:39" pubdate>
+              2023-07-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%89%8D%E7%AB%AF/" class="category-chain-item">前端</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%89%8D%E7%AB%AF/%E8%AF%84%E8%AE%BA/" class="category-chain-item">评论</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E8%AF%84%E8%AE%BA/">#评论</a>
+            
+              <a href="/tags/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/">#实用教程</a>
+            
+              <a href="/tags/%E6%B7%BB%E5%8A%A0/">#添加</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/07/09/%E5%A6%82%E4%BD%95%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A/" target="_self">
+          如何拥有一个属于自己的图床
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/07/09/%E5%A6%82%E4%BD%95%E6%8B%A5%E6%9C%89%E4%B8%80%E4%B8%AA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A/" target="_self">
+        <div>
+          前言(废话)每当我们需要图床的时候，你是不是还在东找找西找找？有时找到了，速度慢？容量限制？现在千寻就来叫你们如何自己做图床 创建github账号相信大家都有了，这里给没有的小伙伴一个教程前往Github当然有些小伙伴可能进不去，这里给大家推荐个软件Fastgithub当然这个软件是在Github上的，所以我给大家我自己分享的蓝奏云链接点击下载下载解压缩即可 教程进去后点击右上角的SingUP填写
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-07-09 19:09" pubdate>
+              2023-07-09
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%9B%BE%E5%BA%8A/" class="category-chain-item">图床</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%9B%BE%E5%BA%8A/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/" class="category-chain-item">软件推荐</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%9B%BE%E5%BA%8A/">#图床</a>
+            
+              <a href="/tags/%E5%88%9B%E5%BB%BA/">#创建</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/07/09/%E2%80%9C%E5%85%8D%E8%B4%B9%E2%80%9D%E4%BA%91%E6%B8%B8%E6%88%8F%E2%80%9C%E6%98%9F%E6%B8%B8%E4%BA%91%E6%B8%B8%E6%88%8F%E2%80%9D/" target="_self">
+          “免费”云游戏“星游云游戏”
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/07/09/%E2%80%9C%E5%85%8D%E8%B4%B9%E2%80%9D%E4%BA%91%E6%B8%B8%E6%88%8F%E2%80%9C%E6%98%9F%E6%B8%B8%E4%BA%91%E6%B8%B8%E6%88%8F%E2%80%9D/" target="_self">
+        <div>
+          前言大家是不是苦于自己电脑配置不够高而不能畅玩自己心仪的游戏而苦恼？好！那么现在就有一款无限制，不需要排队，不需要会员的云游戏上线了，那就是星游云游戏 优点与缺点优点无限制，不需要排队，不需要会员,不限时长！ 界面简洁星游云的界面也是非常简洁，目前只有12款游戏，下周将上线荒野大镖客！ 缺点有数量限制星游虽然好，但热门游戏有数量限制，如荒野大镖客就只有十台的数量限制 打不开当人多时，已经被占满了，
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-07-09 17:18" pubdate>
+              2023-07-09
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E4%BA%91%E6%B8%B8%E6%88%8F/" class="category-chain-item">云游戏</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%B8%B8%E6%88%8F/">#游戏</a>
+            
+              <a href="/tags/%E5%85%8D%E8%B4%B9/">#免费</a>
+            
+              <a href="/tags/%E4%BA%91%E6%B8%B8%E6%88%8F/">#云游戏</a>
+            
+              <a href="/tags/%E5%A5%BD%E7%94%A8/">#好用</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/07/06/%E5%A6%82%E4%BD%95%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%8A%A0%E4%B8%8A%E5%B0%8F%E7%A9%BA%E8%B0%83/" target="_self">
+          如何给博客加上小空调
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/07/06/%E5%A6%82%E4%BD%95%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%8A%A0%E4%B8%8A%E5%B0%8F%E7%A9%BA%E8%B0%83/" target="_self">
+        <div>
+          废话到了夏天了，非常的热，怎么办呢？快为你的博客装上小空调哇！ 观赏大家可以去我博客的小空调主页看看  如何制作一个小空调？现在千寻教你们如何制作一个小空调。不管你是不是anzhiyu或者其他的 都可以使用. 首先新建页面使用 1hexo new page air-conditioner 然后他会在你的hexo目录/blog/source/中生成一个名为air-conditioner的文件，打开它
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-07-06 15:29" pubdate>
+              2023-07-06
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%89%8D%E7%AB%AF/" class="category-chain-item">前端</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%89%8D%E7%AB%AF/">#前端</a>
+            
+              <a href="/tags/%E5%B0%8F%E7%A9%BA%E8%B0%83/">#小空调</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2023/07/05/%E7%83%AD%E8%A1%80%E6%97%A0%E8%B5%96%E5%BF%83%E5%BE%97/" target="_self">
+          热血无赖“心得”
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2023/07/05/%E7%83%AD%E8%A1%80%E6%97%A0%E8%B5%96%E5%BF%83%E5%BE%97/" target="_self">
+        <div>
+          关于热血无赖游戏的心得Hello 大家好！我是千寻玩热血无赖这么久了，我觉得可以给大家分享一点心得。 如何打架大家在热血无赖中打架都会吧？其实我们只需要鼠标左键和F的组合即可了！这个是大部分通用的。 打架技巧如何高效的打架呢？现在！千寻就来告诉你！ 反击反击在热血无赖中对我们是很有帮助的！比如我们在打寺庙之类的任务时，他们还会反击我们，搞得我们都不敢攻击只能反击了，那么现在，我们就来了解一下反击
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-07-05 17:57" pubdate>
+              2023-07-05
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%B8%B8%E6%88%8F/" class="category-chain-item">游戏</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%83%AD%E8%A1%80%E6%97%A0%E8%B5%96/">#热血无赖</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+
+
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <!-- scroll container end -->
+    
 
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
   </div>
-  <!-- app wrapper end -->
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
 
   
-  <!-- Plugin -->
+    <script  src="/js/img-lazyload.js" ></script>
+  
 
 
 
 
-    
-    
-<script src="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
-
-    
-<script src="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-
-    
-
-    
-
-    
-
-    <!-- 数学公式 -->
-    
-
-    <!-- 评论插件 -->
-    
-
-
-
-<!-- CDN -->
-
-
-    
-
-    
-
-    
+  <script  src="/js/local-search.js" ></script>
 
 
 
 
-    <!-- Service Worker -->
-    
-    <!-- baidu push -->
-    
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
 
 
-<script id="async-script" src="/js/main.js?v=2.0.9"></script>
+  
 
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
 </body>
-
 </html>

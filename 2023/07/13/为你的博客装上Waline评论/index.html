@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="x5-fullscreen" content="true">
+<meta name="full-screen" content="yes">
+<meta name="theme-color" content="#317EFB" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
+<meta name="description" content="特别注意！要使用Waline必须要有域名，并且进行绑定，详情查看步骤 依旧是前言如标题，今天千寻将会教你们如何给博客装上Waline这个带后台的评论，并让自己成为管理员进行管理 所需接下来是我们所需要的:域名，没有你即可划走了，Vercel账号（没有注册，挺简单的），域名解析平台，（这里推荐（CF）当然不是穿越火线，而是cloudflare），LeanCloud，然后就是人人皆有的邮箱啦！ 所需要">
+<meta property="og:type" content="article">
+<meta property="og:title" content="为你的博客装上Waline评论">
+<meta property="og:url" content="http://qianxun747.link/2023/07/13/%E4%B8%BA%E4%BD%A0%E7%9A%84%E5%8D%9A%E5%AE%A2%E8%A3%85%E4%B8%8AWaline%E8%AF%84%E8%AE%BA/index.html">
+<meta property="og:site_name" content="千寻">
+<meta property="og:description" content="特别注意！要使用Waline必须要有域名，并且进行绑定，详情查看步骤 依旧是前言如标题，今天千寻将会教你们如何给博客装上Waline这个带后台的评论，并让自己成为管理员进行管理 所需接下来是我们所需要的:域名，没有你即可划走了，Vercel账号（没有注册，挺简单的），域名解析平台，（这里推荐（CF）当然不是穿越火线，而是cloudflare），LeanCloud，然后就是人人皆有的邮箱啦！ 所需要">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://qianxun747.link/img/404.jpg">
+<meta property="og:image" content="http://qianxun747.link/img/404.jpg">
+<meta property="og:image" content="http://qianxun747.link/img/404.jpg">
+<meta property="og:image" content="http://qianxun747.link/img/404.jpg">
+<meta property="og:image" content="http://qianxun747.link/img/404.jpg">
+<meta property="og:image" content="http://qianxun747.link/img/404.jpg">
+<meta property="og:image" content="http://qianxun747.link/img/404.jpg">
+<meta property="og:image" content="http://qianxun747.link/img/404.jpg">
+<meta property="og:image" content="http://qianxun747.link/img/404.jpg">
+<meta property="article:published_time" content="2023-07-13T04:52:30.000Z">
+<meta property="article:modified_time" content="2023-07-14T01:18:49.386Z">
+<meta property="article:author" content="千寻">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="Waline，">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://qianxun747.link/img/404.jpg">
+
+
+<title >为你的博客装上Waline评论</title>
+
+<!-- Favicon -->
+
+    <link href='/img/logo.png?v=2.0.9' rel='icon' type='image/png' sizes='16x16' ></link>
+
+
+    <link href='/img/logo.png?v=2.0.9' rel='icon' type='image/png' sizes='32x32' ></link>
+
+
+
+
+<!-- Plugin -->
+
+
+
+
+    
+<link rel="stylesheet" href="/css/plugins/bootstrap.row.css">
+
+    
+<link rel="stylesheet" href="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+
+    
+<link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.css">
+
+    
+    
+
+
+
+
+<!-- Icon -->
+
+    
+<link rel="stylesheet" href="/css/plugins/font-awesome.min.css">
+
+
+
+
+<!-- Variable -->
+<script>window.ASYNC_CONFIG = {"hostname":"qianxun747.link","author":"千寻","root":"/","typed_text":null,"theme_version":"2.0.9","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"/img/logo.png","icon16":"/img/logo.png","icon32":"/img/logo.png","appleTouchIcon":null,"webmanifest":null,"visibilitychange":false,"hidden":"/failure.ico","showText":"(/≧▽≦/)Hey! Good again!","hideText":"(●—●)Oh, crash!"},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}.","hits":"${hits} results found","hits_time":"${hits} results found in ${time} ms","author":"Post author: ","copyright_link":"Post link: ","copyright_license_title":"Copyright Notice: ","copyright_license_content":"All articles in this blog are licensed under undefined unless otherwise stated.","copy_success":"Copied","copy_failure":"Copy failed","open_read_mode":"Enter reading mode","exit_read_mode":"Exit reading mode","notice_outdate_message":"It has been undefined days since the last update, the content of the article may be outdated.","just":"Just","min":"minutes ago","hour":"hours ago","day":"days ago","month":"months ago"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":false}};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2023-07-14 09:18:49"};</script>
+
+<!-- Theme mode css -->
+<link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.0.9" id="trm-switch-style">
+<script>
+    let defaultMode = ASYNC_CONFIG.theme.default !=='auto' ?  ASYNC_CONFIG.theme.default : (window.matchMedia("(prefers-color-scheme: light)").matches ? 'style-light' : 'style-dark')
+    let catchMode = localStorage.getItem('theme-mode') || defaultMode;
+    let type = catchMode === 'style-dark' ? 'add' : 'remove';
+    document.documentElement.classList[type]('dark')
+</script>
+
+<!-- CDN -->
+
+
+    
+    
+
+
+
+<!-- Site Analytics -->
+ 
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+  <!-- app wrapper -->
+  <div class="trm-app-frame">
+
+    <!-- page preloader -->
+    <div class="trm-preloader">
+    <div class="trm-holder">
+        <div class="preloader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+    <!-- page preloader end -->
+
+    <!-- change mode preloader -->
+    <div class="trm-mode-swich-animation-frame">
+    <div class="trm-mode-swich-animation">
+        <i class="i-sun"><i class="iconfont far fa-sun"></i></i>
+        <div class="trm-horizon"></div>
+        <i class="i-moon"><i class="iconfont far fa-moon"></i></i>
+    </div>
+</div>
+    <!-- change mode preloader end -->
+
+      <!-- scroll container -->
+      <div id="trm-dynamic-content" class="trm-swup-animation">
+        <div id="trm-scroll-container" class="trm-scroll-container" data-scroll-container style="opacity: 0">
+          <div data-scroll-section id="content" class="trm-scroll-section">
+
+            <div class="locomotive-scroll__sticky-target" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none;"></div>
+
+            <!-- top bar -->
+            <header class="trm-top-bar" data-scroll data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
+	<div class="container">
+		<div class="trm-left-side">
+			<!-- logo -->
+<a href="/" class="trm-logo-frame trm-anima-link">
+    
+        <img alt="logo" src="/img/logo.png">
+    
+    
+        <div class="trm-logo-text">
+            千<span>寻</span>
+        </div>
+    
+</a>
+<!-- logo end -->
+		</div>
+		<div class="trm-right-side">
+			<!-- menu -->
+<div class="trm-menu">
+    <nav>
+        <ul>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/" target="">
+                    首页
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/archives/" target="">
+                    归档
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/about/" target="">
+                    关于我
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/contact/" target="">
+                    留言板
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/links/" target="">
+                    友链
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/categories/" target="">
+                    分类
+                </a>
+                
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+<!-- menu end -->
+			
+    <!-- mode switcher place -->
+    <div class="trm-mode-switcher-place">
+        <div class="trm-mode-switcher">
+            <i class="iconfont far fa-sun"></i>
+            <input class="tgl tgl-light" id="trm-swich" type="checkbox">
+            <label class="trm-swich" for="trm-swich"></label>
+            <i class="iconfont far fa-moon"></i>
+        </div>
+    </div>
+    <!-- mode switcher place end -->
+
+			
+		</div>
+		<div class="trm-menu-btn">
+			<span></span>
+		</div>
+	</div>
+</header>
+            <!-- top bar end -->
+
+            <!-- body -->
+            
+<div class="trm-content-start">
+    <!-- banner -->
+    <div class="trm-banner" data-scroll data-scroll-direction="vertical">
+    
+    <!-- banner cover -->
+    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" data-scroll data-scroll-direction="vertical" data-scroll-speed="-3" src="/img/banner.png">
+    <!-- banner cover end -->
+    
+
+    <!-- banner content -->
+    <div class="trm-banner-content trm-overlay">
+        <div class="container" data-scroll data-scroll-direction="vertical" data-scroll-speed="0">
+            <div class="row">
+                
+                <div class="col-lg-4"></div>
+                
+                <div class="col-lg-8">
+
+                    <!-- banner title -->
+                    <div class="trm-banner-text ">
+                        <div class="trm-label trm-mb-20">
+                            NEWS LETTER
+                        </div>
+                        <h1 class="trm-mb-30 trm-hsmb-font">
+                            为你的博客装上Waline评论
+                        </h1>
+
+                        
+                            <ul class="trm-breadcrumbs trm-label">
+                                <li>
+                                    <a href="/" class="trm-anima-link">Home</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        2023
+                                    </span
+                                ></li>
+                            </ul>
+                        
+                    </div>
+                    <!-- banner title end -->
+
+                    <!-- scroll hint -->
+                    <a href="#about-triger" data-scroll-to="#about-triger" data-scroll-offset="-130" class="trm-scroll-hint-frame">
+                        <div class="trm-scroll-hint"></div>
+                        <span class="trm-label">Scroll down</span>
+                    </a>
+                    <!-- scroll hint end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner content end -->
+</div>
+    <!-- banner end -->
+    <div class="container">
+        <div class="row">
+            
+                <div id="page-sidebar" class="col-lg-4 hidden-sm">
+                    <!-- main card -->
+                    
+
+<div class="trm-main-card-frame trm-sidebar">
+    <div class="trm-main-card" data-scroll data-scroll-repeat data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="60"> 
+    
+        <!-- card header -->
+<div class="trm-mc-header">
+    <div class="trm-avatar-frame trm-mb-20">
+        <img alt="Avatar" class="trm-avatar" src="/img/tx.jpg">
+    </div>
+    <h5 class="trm-name trm-mb-15">
+        千寻
+    </h5>
+    
+</div>
+<!-- card header end -->
+        <!-- sidebar social -->
+
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<div class="trm-social">
+    
+        <a href="https://github.com/qianxun7747/" title="MyGithub" rel="nofollow" target="_blank">
+            <i class="iconfont fab fa-github"></i>
+        </a>
+    
+</div>
+
+<!-- sidebar social end -->
+        <!-- info -->
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<ul class="trm-table trm-mb-20">
+    
+        <li>
+            <div class="trm-label">
+                Residence:
+            </div>
+            <div class="trm-label trm-label-light">
+                Mars
+            </div>
+        </li>
+    
+</ul>
+<!-- info end -->
+
+        
+    
+    </div>
+</div>
+                    <!-- main card end -->
+                </div>
+            
+            <div id="page-content" class="col-lg-8">
+                <div class="trm-content" id="trm-content">
+                    <div data-scroll data-scroll-repeat data-scroll-offset="500" id="about-triger"></div>
+
+                    <div id="post-info" class="row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            07/13
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            12:52
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            千寻
+        </div>
+    </div>
+</div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <h1 id="特别注意！"><a href="#特别注意！" class="headerlink" title="特别注意！"></a>特别注意！</h1><p>要使用Waline必须要有域名，并且进行绑定，详情查看步骤</p>
+<h1 id="依旧是前言"><a href="#依旧是前言" class="headerlink" title="依旧是前言"></a>依旧是前言</h1><p>如标题，今天千寻将会教你们如何给博客装上Waline这个带<strong>后台</strong>的评论，并让自己成为<strong>管理员</strong>进行管理</p>
+<h1 id="所需"><a href="#所需" class="headerlink" title="所需"></a>所需</h1><p>接下来是我们所需要的:<strong>域名</strong>，没有你即可划走了，<strong>Vercel账号</strong>（没有注册，挺简单的），域名解析平台，（这里推荐（CF）当然不是穿越火线，而是cloudflare），LeanCloud，然后就是人人皆有的邮箱啦！</p>
+<h2 id="所需要的官网"><a href="#所需要的官网" class="headerlink" title="所需要的官网"></a>所需要的官网</h2><p><a target="_blank" rel="noopener" href="https://dash.cloudflare.com/">cloudflare</a>进不去自行搜索<a target="_blank" rel="noopener" href="https://vercel.com/">Vercel</a><a href="">LeanCloud</a></p>
+<h1 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h1><p>现在正式开始教程</p>
+<h2 id="登录LeanCloud"><a href="#登录LeanCloud" class="headerlink" title="登录LeanCloud"></a>登录LeanCloud</h2><p><a target="_blank" rel="noopener" href="https://console.leancloud.app/login">登录</a>或者<a target="_blank" rel="noopener" href="https://console.leancloud.app/register">注册</a>LeanCloud</p>
+<h2 id="创建应用"><a href="#创建应用" class="headerlink" title="创建应用"></a>创建应用</h2><p>进入之后我们可以创建应用了<br>点击左上角的创建应用<br><img src="https://s2.loli.net/2023/07/13/oJ8zmjCtDNrlQT4.png" alt="NO.1.png" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br>选择<strong>免费</strong>的开发版，名字随意<br><img src="https://s2.loli.net/2023/07/13/afgtIDbX45KspSe.png" alt="NO.2.png" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h2 id="找到KEY"><a href="#找到KEY" class="headerlink" title="找到KEY"></a>找到KEY</h2><p>然后进入应用找到设置，找到应用凭证，找到<strong>APPID，APPKEY和MasterKey</strong><br><img src="https://s2.loli.net/2023/07/13/LWBgNP7Si5x1ypJ.png" alt="NO.3.png" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h2 id="进行部署"><a href="#进行部署" class="headerlink" title="进行部署"></a>进行部署</h2><p>把他们记好，然后点击<a target="_blank" rel="noopener" href="https://vercel.com/new/clone?repository-url=https://github.com/walinejs/waline/tree/main/example">部署</a><strong>没错就是我文章中的部署</strong><br>并填写好仓库名<br><img src="https://s2.loli.net/2023/07/13/J1imLhP4yUNr3oF.png" alt="NO.4.png" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br>此时 Vercel 会基于 Waline 模板帮助你新建并初始化仓库，仓库名为你之前输入的项目名。<br><img src="https://s2.loli.net/2023/07/13/IUOtLCyedlVK7J1.png" alt="NO.5.png" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br>一两分钟后，满屏的烟花会庆祝你部署成功。此时点击 Go to Dashboard 可以跳转到应用的控制台。<br><img src="https://s2.loli.net/2023/07/13/gimwZfRCLSa5YjB.png" alt="NO.6.png" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h2 id="填写环境变量"><a href="#填写环境变量" class="headerlink" title="填写环境变量"></a>填写环境变量</h2><p>点击顶部的 Settings - Environment Variables 进入环境变量配置页，并配置三个环境变量 LEAN_ID, LEAN_KEY 和 LEAN_MASTER_KEY 。它们的值分别对应上一步在 LeanCloud 中获得的 APP ID, APP KEY, Master Key。<br><img src="https://s2.loli.net/2023/07/13/sulBiJPxEztSGVe.png" alt="NO.7.png" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>注</p>
+<p>如果你使用 LeanCloud 国内版，请额外配置 LEAN_SERVER 环境变量，值为你绑定好的域名。</p>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>环境变量配置完成之后点击顶部的 Deployments 点击顶部最新的一次部署右侧的 Redeploy 按钮进行重新部署。该步骤是为了让刚才设置的环境变量生效。<br><img src="https://s2.loli.net/2023/07/13/hN6amWu3VvlqHy8.png" alt="NO.8.png" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br>此时会跳转到 Overview 界面开始部署，等待片刻后 STATUS 会变成 Ready。此时请点击 Visit ，即可跳转到部署好的网站地址，此地址即为你的服务端地址。<strong>当然你会发现你进不去</strong></p>
+<h2 id="必做！绑定域名"><a href="#必做！绑定域名" class="headerlink" title="必做！绑定域名"></a>必做！绑定域名</h2><p>因为Vercel在国内被墙了，所以我们<strong>必须</strong>进行域名绑定<br>我们进入我们的Vercel项目，就是我们创造的Waline评论的项目，进入设置的域名也就是Settings - Domains 进入域名配置页<br>输入需要绑定的域名并点击 Add，<br>然后去CF找到你的域名(自己提前添加)<br>然后添加<br>这是个例子</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CNAME</td>
+<td>example</td>
+<td>cname.vercel-dns.com</td>
+</tr>
+<tr>
+<td>如果你使用的EU.ORG域名并且之前已经进行了域名配置可以直接添加例如</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Type</td>
+<td>Name</td>
+<td>Value</td>
+</tr>
+<tr>
+<td>——-</td>
+<td>———</td>
+<td>———————–</td>
+</tr>
+<tr>
+<td>CNAME</td>
+<td>example(前缀，比如你的域名是xxx.eu.org，那么你的Waline域名将为example.xxx.eu.org)</td>
+<td>cname.vercel-dns.com  (这个东西在vercel给你的配置)</td>
+</tr>
+<tr>
+<td><img src="https://s2.loli.net/2023/07/13/hIi1oVgTR2wmAHP.png" alt="NO.11.png" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h1><p>有任何问题欢迎提问评论邮箱QQ都可以建议QQ和邮箱给我发消息</p>
+
+</article>
+    
+    
+
+</div>
+<div id="post-next-prev" class="row">
+    <div class="col-lg-12">
+        <!-- title -->
+        <h5 class="trm-title-with-divider">
+            Other Articles
+            <span data-number="02"></span>
+        </h5>
+    </div>
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation" data-scroll data-scroll-offset="40">
+        <a href="/2023/07/14/%E8%A7%A3%E5%86%B34000%E7%AB%AF%E5%8F%A3%E9%97%AE%E9%A2%98/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="https://cdn.staticaly.com/gh/qianxun7747/picx-images-hosting@master/xxx/QQ%E6%88%AA%E5%9B%BE20230714113830.5gavk6c6mm00.webp">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" /categories/%E5%89%8D%E7%AB%AF/">
+                    前端
+                </a>
+            </div>
+            <h5>
+                <a href="/2023/07/14/%E8%A7%A3%E5%86%B34000%E7%AB%AF%E5%8F%A3%E9%97%AE%E9%A2%98/" class="trm-anima-link">
+                    解决4000端口问题
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>23/07/14</li>
+                <li>11:47</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation" data-scroll data-scroll-offset="40">
+        <a href="/2023/07/11/%E5%A6%82%E4%BD%95%E5%9C%A8%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9C%B0%E5%9B%BE/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="https://s2.loli.net/2023/07/11/X4oNCkqsm1RijTV.png">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" /categories/%E5%89%8D%E7%AB%AF/">
+                    前端
+                </a>
+            </div>
+            <h5>
+                <a href="/2023/07/11/%E5%A6%82%E4%BD%95%E5%9C%A8%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%9C%B0%E5%9B%BE/" class="trm-anima-link">
+                    如何在博客中添加地图
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>23/07/11</li>
+                <li>12:53</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+</div>
+
+    
+
+    <div class="trm-card trm-scroll-animation comment-container" data-scroll data-scroll-offset="50">
+    <div id="tcomment"></div>
+</div>
+
+
+
+                    <div class="trm-divider footer-divider"></div>
+
+                    <!-- footer -->
+                    <footer class="trm-scroll-animation" data-scroll data-scroll-offset="50">
+
+    
+
+    
+
+    
+        <div class="trm-footer-item">
+            <span>
+                Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> v6.3.0
+            </span>
+            <span class="footer-separator" data-separator=" | "></span>
+            <span> 
+                Theme - 
+                <a rel="noopener" href='https://github.com/MaLuns/hexo-theme-async' target='_blank'>Async</a>
+                v2.0.9
+            </span>
+        </div>
+      
+
+     
+
+     
+</footer>
+ 
+                    <!-- footer end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- body end -->
+
+            <div class="trm-fixed-container" data-scroll data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
+    
+        <div class="trm-fixed-btn" data-title="Read Mode" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
+        </div>
+    
+    
+    <div id="trm-back-top" class="trm-fixed-btn" data-title="Back To Top">
+        <i class="iconfont fas fa-arrow-up"></i>
+    </div>
+</div>
+          </div>
+        </div>
+      </div>
+      <!-- scroll container end -->
+
+  </div>
+  <!-- app wrapper end -->
+
+  
+  <!-- Plugin -->
+
+
+
+
+    
+    
+<script src="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
+    
+<script src="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+    
+
+    
+
+    
+
+    <!-- 数学公式 -->
+    
+
+    <!-- 评论插件 -->
+    
+        
+
+        
+
+            
+<script src="https://unpkg.com/twikoo@1.6.7/dist/twikoo.all.min.js" data-swup-reload-script data-reset="true"></script>
+
+            <script data-swup-reload-script>
+                twikoo.init({
+                    ...{"enable":true,"envId":"https://twikoo.qianxun7747.eu.org/"},
+                    el:'#tcomment'
+                }).then(function () {
+                    let container = document.querySelector('body>.tk-admin-container')
+                    if(container) container.remove()
+                    document.body.append(document.querySelector('.tk-admin-container'))
+                });;
+            </script>
+
+        
+    
+
+
+
+<!-- CDN -->
+
+
+    
+
+    
+
+    
+
+
+
+
+    <!-- Service Worker -->
+    
+    <!-- baidu push -->
+    
+
+
+<script id="async-script" src="/js/main.js?v=2.0.9"></script>
+
+</body>
+
+</html>
